@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link href='css/calendar.css' rel='stylesheet'/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" src="js/calendar.js"></script>
+	<script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js'></script>
+	<script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/main.es.js'></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="slippry/slippry.min.js"></script>
+	<link rel="stylesheet" href="slippry/slippry.css"/>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<title>Nectar</title>
+</head>
+<body>
+	<header>
+		<div>
+			<a href=""><img class="logo" src="img/logo.png"></a>
+		</div>
+		<div class="navegacion">
+			<div class="botones">
+			<a href="login.html"><button class="blanco">Iniciar Sesión</button></a>
+			<a href="register.html"><button class="verde">Registrate</button></a>	
+			</div>
+			<nav>
+				<ul>
+					<li><a href="">HOME</a></li>
+					<li><a href="#carrusel">LO NUEVO</a></li>
+					<li><a href="#productos">PRODUCTOS</a></li>
+					<li><a href="website/catalogo.html">CATÁLOGO</a></li>
+					<li><a href="#calendario">PROGRAMATE</a></li>
+					<li><a href="website/contacto.html">CONTACTANOS</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<main>
+		<section class="landing">
+			<div>
+				<h1>GIRLICORES: Brinda con los mejores</h1>
+				<h2><i>Donde te ofrecemos la calidad como protagonista.</i></h2>
+				<a href="#carrusel"><button class="verde">Conoce más</button></a>
+			</div>
+			<div class="imagenes">
+				<img src="img/1.png">
+				<img class="ancho" src="img/2.png">
+				<img src="img/3.png">
+			</div>
+		</section>
+		<section id="carrusel" class="slippry">
+			<ul id="slippry-demo">
+				<li>
+					<a href="#slide1"><img src="img/banner1.jpeg"></a>
+				</li>
+				<li>
+					<a href="#slide2"><img src="img/banner2.png"></a>
+				</li>
+				<li>
+					<a href="#slide3"><img src="img/banner3.png"></a>
+				</li>
+				<li>
+					<a href="#slide3"><img src="img/banner4.jpeg"></a>
+				</li>
+			</ul>
+		</section>
+		<section id="productos" class="destacados">
+			<h2>NUESTRO PRODUCTO DESTACADO</h2>
+			<div>
+				<img src="img/destacado1.jpeg">
+				<img src="img/destacado2.jpeg">
+				<img src="img/destacado3.jpeg">
+			</div>
+			<a href="website/catalogo.html"><button class="fucsia">Compra Aquí</button></a>
+		</section>
+		<section id="calendario" class="calendario">
+			<h2>PROGRAMATE CON NECTAR</h2>
+			<div class="calendar">
+				<div id='calendar'></div>
+				<div id="customPrompt" class="modal">
+					<div class="modal-content">
+						<span class="close">&times;</span>
+						<p>Ingrese el nombre del evento:</p>
+						<input type="text" id="eventInput">
+						<button id="submitButton">Aceptar</button>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<h3><i>SIGUENOS</i></h3>
+		<div class="iconos">
+			<img src="img/chat.png">
+			<img src="img/instagram.png">
+			<img src="img/whatsapp.png">
+		</div>
+		<div class="raya"></div>
+		<p>
+			<i>
+				El exceso de alcohol es perjudicial para la salud<br>
+				Prohíbese el expendio de bebidas embriagantes a menores de edad (Ley 30 de 19869)<br>
+				2024 GIRLICORES. DESARROLLADOR<br>
+			</i>
+		</p>
+		<img src="img/icono4.png" class="girardot">
+	</footer>
+	<script type="text/javascript">
+		jQuery(document).ready(function(){
+			jQuery('#slippry-demo').slippry()
+		});
+	</script>
+</body>
+</html>

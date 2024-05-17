@@ -1,0 +1,73 @@
+body{
+	background: url("../imagenes/fondo.png");
+	background-size: cover;
+	background-position: center;
+}
+form{
+	margin: 140px auto;
+	width: 350px;
+	height: 350px;
+	padding: 10px;
+	box-shadow: 0 0 10px #0008;
+	background: #fff3;
+	border-radius: 8px;
+}
+.register{
+	height: 400px;
+}
+h2{
+	font-family: sans-serif;
+	font-size: 32px;
+	text-align: center;
+	color: white;
+}
+.texto{
+	margin: 8px auto;
+	display: block;
+	padding: 8px 12px;
+	font-size: 18px;
+	background: #4448;
+	color: white;
+	border: none;
+}
+.corto{
+	display: inline-block;
+	width: 40%;
+}
+::-webkit-input-placeholder {
+	color: white;
+}
+:-moz-placeholder {
+	color: white;
+}
+::-moz-placeholder {
+	color: white;
+}
+:-ms-input-placeholder {
+	color: white;
+}
+.enviar{
+	color: white;
+	padding: 8px 14px;
+	background: #944bf2;
+	border: none;
+	margin: 24px auto;
+	display: block;
+	font-size: 20px;
+	font-weight: bold;
+	width: 255px;
+	border-radius: 4px;
+	box-shadow: 0 0 12px #944bf2;
+}
+a{
+	font-family: sans-serif;
+	display: block;
+	margin: 40px auto;
+	color: white;
+	background: #000a;
+	padding: 10px 4px;
+	width: 50%;
+	text-align: center;
+	font-weight: bold;
+	text-decoration: none;
+}
