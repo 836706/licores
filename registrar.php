@@ -1,35 +1,30 @@
 <?php
-// Conexión a la base de datos esta default 
-require('db_config.php');
 
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Verificar la conexión
-if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
+function conectar() {
+    $conexion = new PDO("mysql:host=localhost;dbname=mydb", "root", "");
+    return $conexion;
 }
 
-// Obtener los datos del formulario
-$nombre_usuario = $_POST["usuario"];
 $nombre = $_POST["nombre"];
 $apellido = $_POST["apellido"];
+$nombre_usuario = $_POST["nombre_usuario"];
 $correo = $_POST["correo"];
-$password = $_POST["contrasena"];
+$contrasena = $_POST["contrasena"];
+$contrasena = hash("md5",$contrasena);
+$ingresar_usuario = conectar();
+$ingresar_usuario = $ingresar_usuario->query("INSERT INTO usuarios (nombre, apellido, nombre_usuario, contrasena, correo) VALUES ('$nombre','$apellido','$nombre_usuario','$contrasena','$correo')");
+if ($ingresar_usuario->rowCount() > 0) {
+    echo("<h1>Usuario registrado con exito </h1>");
 
-// Preparar la consulta SQL
-$sql = "INSERT INTO usuarios (nombre, apellido, nombre_usuario, contrasena, correo) VALUES (?, ?, ?, ?, ?)";
+// Redirigir al usuario a otra página después de cierta acción
+header("Location: http://localhost/licores/");
+// Asegúrate de incluir exit para detener la ejecución del script después de la redirección
+exit;
 
-// Preparar la sentencia
-$stmt = $conn->prepare($sql);
-
-// Vincular los parámetros
-$stmt->bind_param("sssss", $nombre, $apellido, $nombre_usuario, $password,  $correo );
-
-// Ejecutar la sentencia
-if ($stmt->execute() === TRUE) {
-    echo "Registro exitoso";
 } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    // El inicio de sesión es inválido
+    echo "Usuario o contraseña incorrectos";
+    
 }
 
 // Cerrar la sentencia y la conexión

@@ -1,16 +1,20 @@
 #calendar {
-    margin: 0 auto;
+    max-width: 990px;
+    margin: auto;
     font-family: Arial, sans-serif;
+
 }
   
 .fc-toolbar-title {
     font-size: 24px;
-    color: #333;
+    color: #000000;
     text-transform: uppercase;
+    text-decoration-line: underline;
+    
 }
    
 .fc-prev-button, .fc-next-button {
-    background-color: #007bff;
+    background-color: #496582;
     color: #fff;
 }
   
@@ -28,13 +32,13 @@
 
   
 .fc-event {
-    background-color: #007bff;
+    background-color: #797d81;
     color: #fff;
-    border-color: #007bff;
+    border-color: #000000;
 }
 
 .fc-day:hover {
-    background-color: lightblue;
+    background-color: rgb(147, 158, 162);
     cursor: pointer;
 }
 
@@ -84,4 +88,51 @@
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+  
+input[type="text"],
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+  
+button {
+    background-color: #2e8831;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+}
+  
+button:hover {
+    background-color: #2e8831;
+}
+
+.my-event-class {
+    background-color: #0080ff;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.fc-addEvent-button {
+    background-color: #4CAF50; 
+    color: white;
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px;
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+}
+
+.fc-addEvent-button:hover {
+    background-color: #45a049;
 }

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+  <meta charset='utf-8' />
+  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js'></script>
+  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/main.es.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.1/main.min.js'></script>
+
+  <link rel="stylesheet" type="text/css" href="css/calendar.css">
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var calendarEl = document.getElementById('calendar');
+      var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'listWeek',
+        locale: 'es',
+        headerToolbar: {
+          left: 'list, prev,today,next',
+          center: 'title',
+          right: 'dayGridMonth,timeGridWeek,timeGridDay',
+        },
+        events: [
+          {
+            title: 'Evento 1',
+            start: '2024-05-15T10:00:00'
+          },
+          {
+            title: 'Evento 2',
+            start: '2024-05-12T15:00:00'
+          }
+        ],
+        buttonText: {
+          today: 'Hoy',
+          month: 'Mes',
+          week: 'Semana',
+          day: 'Día',
+          list: 'Lista'
+        },
+        customButtons: {
+          addEventButton: {
+            text: 'Evento',
+            click: function() {
+              var eventName = prompt('Ingrese el nombre del evento:');
+              if (eventName) {
+                var dateStr = prompt('Ingrese la fecha del evento (AAAA-MM-DD):');
+                if (dateStr) {
+                  var date = new Date(dateStr + 'T00:00:00');
+                  if (!isNaN(date.getTime())) {
+                    calendar.addEvent({
+                      title: eventName,
+                      start: date,
+                      allDay: true
+                    });
+                    alert('¡DISFRUTA UN GUARO!');
+                  } else {
+                    alert('Fecha inválida.');
+                  }
+                } else {
+                  alert('No se ingresó una fecha.');
+                }
+              } else {
+                alert('No se ingresó un nombre para el evento.');
+              }
+            }
+          }
+        },
+        headerToolbar: {
+          left: 'prev,today,next',
+          center: 'title',
+          right: 'dayGridMonth,timeGridWeek,timeGridDay,list,addEventButton'
+        }
+      });
+      calendar.render();
+    });
+  </script>
+</head>
+<body>
+  <div id='calendar'></div>
+</body>
+</html>

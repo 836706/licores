@@ -5,7 +5,8 @@
 	text-decoration: none;
 	font-size: 1.4vw;
 	font-family: sans-serif;
-	scroll-behavior: smooth;
+	scroll-behavior: scroll;
+
 }
 button{
 	cursor: pointer;
@@ -15,16 +16,23 @@ nav li{
 	border-bottom: 0.15vw solid transparent;
 }
 nav li:hover{
-	border-bottom: 0.15vw solid black;
+	border-bottom: 0.15vw solid rgb(0, 14, 9);
 }
 header{
 	display: flex;
-	padding: 2vw 4vw;
+	padding: 0vw 4vw;
 	justify-content: space-between;
-	background: #98c6fa;
+	background:#252323;
+	width: 100vw;
+	position: fixed;
+	z-index: 100;
+	align-items: center;
 }
 .logo{
-	width: 10vw;
+	width: 8vw;
+	justify-content: center;
+	
+	
 }
 .navegacion{
 	width: 60%;
@@ -35,22 +43,23 @@ header{
 	gap: 4vw;
 }
 .botones button{
-	padding: 0.4vw 1vw;
+	padding: 0.4vw 3vw;
 	border-radius: 0.6vw;
-	border: 0.2vw solid black;
+	border: 0.2vw solid rgb(255, 255, 255);
 	box-shadow: 0.2vw 0.2vw 0 black;
+	
 }
 .blanco{
 	background: white;
 }
 .blanco:hover{
-	background: lightgray;
+	background: rgb(255, 255, 255);
 }
 .verde{
-	background: #47ebb9;
+	background:#404846;
 }
 .verde:hover{
-	background: #14b887;
+	background: #47EAB9;
 }
 .carrito{
 	border-bottom: 0.2vw solid transparent;
@@ -65,12 +74,12 @@ nav ul{
 	justify-content: space-between;
 }
 nav ul li a{
-	color: black;
+	color: rgb(255, 255, 255);
 }
 .landing{
 	display: flex;
 	padding: 1vw 4vw 4vw;
-	background: #98c6fa;
+	background: #dfdfdf;
 }
 .landing div{
 	width: 50%;
@@ -78,17 +87,22 @@ nav ul li a{
 h1{
 	font-size: 4.2vw;
 	margin: 1vw;
+	color: #000000;
+	margin-top: 7vw;
 }
 h2{
 	font-size: 1.8vw;
+	margin: 1vw;
+	color: #000000;
 }
 .landing div button{
 	display: block;
-	padding: 1.6vw 3vw;
+	width: 340px; 
+	padding: 1vw 1vw;
 	font-size: 2vw;
 	border-radius: 2.6vw;
-	border: 0.2vw solid black;
-	margin: 4vw auto;
+	border: 0.3vw solid rgb(255, 255, 255);
+	margin: 3vw auto;
 }
 .imagenes{
 	display: flex;
@@ -134,25 +148,27 @@ h2{
 }
 .fucsia{
 	display: block;
-	margin: auto;
-	padding: 2vw 4vw;
+	margin: 2px auto 1vw;
+	padding: 10px 24px;
+	width: 250px; 
 	border-radius: 1vw;
-	background: #f63def;
-	border: 0.2vw solid black;
+	background: #404846;
+	border: 0.2vw solid rgb(255, 255, 255);
 	transform: translateY(-2vw);
 	font-size: 1.6vw;
 }
 .fucsia:hover{
-	background: #c309bd;
+	background: #47EAB9;
+	
 }
 .calendar{
-	background: #d7e9ff;
+	background:#252323a8;
 	display: flex;
 	justify-content: center;
 	padding: 4vw;
 }
 .catalogo header{
-	background: white;
+	background: #252323;
 }
 .catalogo header img{
 	width: 5vw;
@@ -177,7 +193,7 @@ h2{
 	width: 10vw;
 }
 .primero{
-	background-image: url(../img/fondo.jpg);
+	background-image: url(../img/nuevo.png);
 	height: 40vw;
 	display: flex;
 	justify-content: center;
@@ -185,7 +201,7 @@ h2{
 }
 .primero h1{
 	font-size: 5vw;
-	color: white;
+	color: rgb(255, 255, 255);
 }
 .productos .grilla{
 	display: grid;
@@ -196,26 +212,27 @@ h2{
 	font-size: 4vw;
 }
 .grilla{
-	padding: 4vw;
+	padding: 11vw;
 	gap: 8vw;
 }
 .productos .info{
 	height: 50vw;
-	padding: 2vw;
+	padding: 1vw;
 	position: relative;
 }
 .productos .info .foto{
 	display: flex;
 	width: 100%;
 	justify-content: center;
-	padding: 4vw;
+	padding: 2vw;
 	background: #a0c0a9;
 	border-radius: 4vw;
+
 }
 .productos .info img{
 	margin: 0;
 	padding: 0;
-	height: 30vw;
+	height: 20vw;
 }
 .productos .info .delgado{
 	width: 8vw;
@@ -306,7 +323,8 @@ footer h3 i{
 	background: white;
 	padding: 1vw;
 	transform: translateY(3vw);
-	margin-top: -3vw;
+	width: 6vw;
+	height: 6vw;
 }
 .iconos img{
 	width: 4vw;
@@ -316,10 +334,10 @@ footer h3 i{
 	transform: scale(1.2);
 }
 .raya{
-	width: 100%;
+	width: 90vw;
 	background: black;
-	height: 0.2vw;
-	margin-bottom: 3vw;
+	height: 0.3vw;
+	margin-bottom: 6vw;
 }
 footer p{
 	text-align: center;
@@ -332,13 +350,35 @@ footer p{
 	right: 1vw;
 }
 .espacio_blanco{
-	height: 100vw;
+	height: 20vw;
 }
-.contacto header{
-	background: #d9d9d9;
-	align-items: center;
+.navegacion_catalogo{
+	display: flex;
+	width: 40vw;
+	justify-content: space-between;
+	padding-top: 3vw;
+	margin-right: 3vw;
+
 }
-.contacto .info{
-	font-weight: bold;
-	margin: 2vw 0.4vw;
+
+#slippry-demo img{
+	width: 100vw;
+	height: 50vw;
+	object-fit: cover;
+}
+main{
+	padding-top: 10vw;
+}
+
+.formulario{
+	width: 100vw;
+	margin-bottom: 5vw;
+	padding-top: 3vw;
+	
+	
+}
+.formulario iframe{
+
+width: 100vw;
+margin: auto;
 }

@@ -7,15 +7,37 @@
     <title>Login | nectar</title>
 </head>
 <body>
-    <form class="register" action="registrar.php" method="post">
-        <h2>REGISTRARSE</h2>
-        <input class="texto corto" type="text" name="nombre" placeholder="nombre">
-        <input class="texto corto" type="text" name="apellido" placeholder="apellido">
-        <input class="texto corto" type="text" name="usuario" placeholder="usuario">
-        <input class="texto corto" type="text" name="correo" placeholder="correo">
-        <input class="texto" type="password" name="contrasena" placeholder="contraseña">
+    <script>
+        function validarFormulario() {
+            const correo = document.getElementById("correo").value;
+            const contrasena = document.getElementById("contrasena").value;
+
+            // Validación del correo (asegúrate de ajustar la expresión regular según tus necesidades)
+            const correoValido = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(correo);
+            if (!correoValido) {
+                alert("Por favor, ingresa un correo válido.");
+                return false;
+            }
+
+            // Validación de la contraseña (puedes agregar más criterios aquí)
+            if (contrasena.length < 6) {
+                alert("La contraseña debe tener al menos 6 caracteres.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+
+    <form class="register" action="registrar.php" method="post" onsubmit="return validarFormulario()">
+        <input class="texto corto" type="text" name="nombre" placeholder="Nombre" required pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ]{3,20}">
+        <input class="texto corto" type="text" name="apellido" placeholder="Apellido" required="[a-zA-ZáéíóúÁÉÍÓÚñÑ]{3,20}">
+        <input class="texto corto" type="text" name="nombre_usuario" placeholder="Usuario" required>
+        <input class="texto corto" type="email" name="correo" id="correo" placeholder="Correo" required>
+        <input class="texto" type="password" name="contrasena" id="contrasena" placeholder="Contraseña" required>
         <input class="enviar" type="submit" name="enviar" value="REGISTRARSE" id="boton">
-        <a href="login.php">INGRESAR</a>
+        <a href="login.html">INGRESAR</a>
     </form>
+   
 </body>
 </html>

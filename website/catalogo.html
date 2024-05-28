@@ -4,35 +4,45 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="../css/styles.css">
+	<link rel="stylesheet" href="../css/buscador.css">
 	<title>Catalogo</title>
 </head>
 <body class="catalogo">
 	<header>
-		<div>
+		<div class="buscador">
 			<a href="../index.html"><img class="logo" src="../img/logo.png"></a>
+			<input type="text" placeholder="buscar">
+			<select id="categoryFilter">
+				<option value="">Todos</option>
+				<option value="Sugar Free">Sugar Free</option>
+				<option value="Dorado">Dorado</option>
+				<option value="Club">Club</option>
+				<option value="Santa Fe">Santa Fe</option>
+			  </select>
+			
+			<div id="productList"></div>
+			
+
+			
 		</div>
-		<div class="navegacion">
-			<div class="botones">
-				<div class="buscador">
-					<input type="text" name="">
-					<button><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #ffffff;transform: ;msFilter:;"><path d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"></path></svg></button>
-				</div>
-				<img class="carrito" src="../img/carrito.png">
-			</div>
+		
 			<nav>
-				<ul>
+			
+				<ul class="navegacion_catalogo">
 					<li><a href="../index.html">HOME</a></li>
-					<li><a href="../index.html#carrusel">LO NUEVO</a></li>
-					<li><a href="../index.html#productos">PRODUCTOS</a></li>
+
 					<li><a href="">CATÁLOGO</a></li>
+
 					<li><a href="../index.html#calendario">PROGRAMATE</a></li>
+					
 					<li><a href="contacto.html">CONTACTANOS</a></li>
 				</ul>
 			</nav>
-		</div>
+			
 	</header>
 	<main>
 		<section class="primero">
+			
 			<h1>CATÁLOGO</h1>
 		</section>
 		<section class="productos">
@@ -41,7 +51,7 @@
 
 				<div class="info">
 					<div class="foto">
-						<button class="mas"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" style="fill: #10af3d;transform: ;msFilter:;"><path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"></path></svg></button>
+						<button class="mas"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" style="fill: #10af3d;"><path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"></path></svg></button>
 						<button class="agregar">Agregar</button>
 						<img src="../img/producto1.png">
 						<img class="delgado" src="../img/BotonC2000.png">
@@ -52,7 +62,7 @@
 
 				<div class="info">
 					<div class="foto">
-						<button class="mas"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" style="fill: #10af3d;transform: ;msFilter:;"><path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"></path></svg></button>
+						<button class="mas"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" style="fill: #10af3d;"><path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"></path></svg></button>
 						<button class="agregar">Agregar</button>
 						<img src="../img/producto2.png">
 						<img class="delgado" src="../img/BotonC1500.png">
@@ -63,7 +73,7 @@
 
 				<div class="info">
 					<div class="foto">
-						<button class="mas"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" style="fill: #10af3d;transform: ;msFilter:;"><path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"></path></svg></button>
+						<button class="mas"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" style="fill: #10af3d;"><path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"></path></svg></button>
 						<button class="agregar">Agregar</button>
 						<img src="../img/producto3.png">
 						<img class="delgado" src="../img/BotonC1000.png">
@@ -74,7 +84,7 @@
 
 				<div class="info">
 					<div class="foto">
-						<button class="mas"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" style="fill: #10af3d;transform: ;msFilter:;"><path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"></path></svg></button>
+						<button class="mas"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" style="fill: #10af3d;"><path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"></path></svg></button>
 						<button class="agregar">Agregar</button>
 						<img src="../img/producto4.png">
 						<img class="delgado" src="../img/BotonC750.png">
@@ -85,7 +95,7 @@
 
 				<div class="info">
 					<div class="foto">
-						<button class="mas"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" style="fill: #10af3d;transform: ;msFilter:;"><path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"></path></svg></button>
+						<button class="mas"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" style="fill: #10af3d;"><path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"></path></svg></button>
 						<button class="agregar">Agregar</button>
 						<img src="../img/producto5.png">
 						<img class="delgado" src="../img/BotonC375.png">
@@ -96,7 +106,7 @@
 
 				<div class="info azul">
 					<div class="foto">
-						<button class="mas"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" style="fill: #944bf1;transform: ;msFilter:;"><path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"></path></svg></button>
+						<button class="mas"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" style="fill: #944bf1;"><path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"></path></svg></button>
 						<button class="agregar">Agregar</button>
 						<img src="../img/producto6.png">
 						<img class="delgado" src="../img/BotonS750.png">
@@ -107,7 +117,7 @@
 
 				<div class="info azul">
 					<div class="foto">
-						<button class="mas"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" style="fill: #944bf1;transform: ;msFilter:;"><path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"></path></svg></button>
+						<button class="mas"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" style="fill: #944bf1;"><path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"></path></svg></button>
 						<button class="agregar">Agregar</button>
 						<img src="../img/producto7.png">
 						<img class="delgado" src="../img/BotonS370.png">
@@ -118,7 +128,7 @@
 
 				<div class="info amarillo">
 					<div class="foto">
-						<button class="mas"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" style="fill: #f1ea39;transform: ;msFilter:;"><path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"></path></svg></button>
+						<button class="mas"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" style="fill: #f1ea39;"><path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"></path></svg></button>
 						<button class="agregar">Agregar</button>
 						<img src="../img/producto8.png">
 						<img class="delgado" src="../img/BotonD750.png">
@@ -136,7 +146,7 @@
 
 				<div class="info cafe">
 					<div class="foto">
-						<button class="mas"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" style="fill: #f9bd47;transform: ;msFilter:;"><path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"></path></svg></button>
+						<button class="mas"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" style="fill: #f9bd47;"><path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"></path></svg></button>
 						<button class="agregar">Agregar</button>
 						<img src="../img/producto9.png">
 					</div>
@@ -146,7 +156,7 @@
 
 				<div class="info cafe">
 					<div class="foto">
-						<button class="mas"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" style="fill: #f9bd47;transform: ;msFilter:;"><path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"></path></svg></button>
+						<button class="mas"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" style="fill: #f9bd47;"><path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"></path></svg></button>
 						<button class="agregar">Agregar</button>
 						<img src="../img/producto10.png">
 					</div>
@@ -156,7 +166,7 @@
 
 				<div class="info cafe">
 					<div class="foto">
-						<button class="mas"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" style="fill: #f9bd47;transform: ;msFilter:;"><path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"></path></svg></button>
+						<button class="mas"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" style="fill: #f9bd47;"><path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"></path></svg></button>
 						<button class="agregar">Agregar</button>
 						<img src="../img/producto11.png">
 					</div>
@@ -169,19 +179,22 @@
 	</main>
 	<footer>
 		<div class="iconos">
-			<img src="../img/chat.png">
-			<img src="../img/instagram.png">
-			<img src="../img/whatsapp.png">
+			
+			<img src="../img/icono4.png" class="girardot">
+				<!-- Código de instalación Cliengo para mega82.abdalladina@gmail.com --> 
+<script type="text/javascript">(function () { var ldk = document.createElement('script'); ldk.type = 'text/javascript'; ldk.async = true; ldk.src = 'https://s.cliengo.com/weboptimizer/66452d291ed83a6a9f13b939/66452d2b1ed83a6a9f13b93d.js?platform=view_installation_code'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ldk, s); })();</script>
+
+			
 		</div>
 		<div class="raya"></div>
 		<p>
 			<i>
-				El exceso de alcohol es perjudicial para la salud<br>
-				Prohíbese el expendio de bebidas embriagantes a menores de edad (Ley 30 de 19869)<br>
+				EL EXCESO DE ALCOHOL ES PERJUCIAL PARA LA SALUD <br>
+				PROHÍBESE EL EXPENDIO DE BEBIDAS EMBRIAGANTES A MENORES DE EDAD (LEY 30 DE 19869)<br>
 				2024 GIRLICORES. DESARROLLADOR<br>
 			</i>
 		</p>
-		<img src="../img/icono4.png" class="girardot">
+	
 	</footer>
 </body>
 </html>

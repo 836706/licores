@@ -1,0 +1,153 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	font-size: 1.4vw;
+	font-family: sans-serif;
+	scroll-behavior: scroll;
+
+}
+button{
+	cursor: pointer;
+}
+nav li{
+	cursor: pointer;
+	border-bottom: 0.15vw solid transparent;
+}
+nav li:hover{
+	border-bottom: 0.15vw solid rgb(0, 254, 148);
+}
+header{
+	display: flex;
+	padding: 0vw 2vw;
+	justify-content: space-between;
+	background: #ffffff;
+}
+.logo{
+	width: 8vw;
+	justify-content: center;
+	
+}
+.navegacion{
+	width: 30%;
+}
+
+nav ul{
+	margin: 2vw 2vw;
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	padding-top: 3vw;
+	margin-right: 3vw;
+	width: 30vw;
+}
+nav ul li a{
+	color: black;
+	
+}
+.landing{
+	display: flex;
+	padding: 1vw 4vw 4vw;
+	background: #000000;
+}
+.landing div{
+	width: 50%;
+}
+h1{
+	font-size: 4.2vw;
+	margin: 1vw;
+	color: #ffffff;
+}
+h2{
+	font-size: 1.8vw;
+	margin: 1vw;
+	color: #ffffff;
+}
+.landing div button{
+	display: block;
+	width: 350px; 
+	padding: 1.1vw 1vw;
+	font-size: 2vw;
+	border-radius: 2.6vw;
+	border: 0.2vw solid rgb(255, 255, 255);
+	margin: 4vw auto;
+}
+.iconos{
+	display: flex;
+	justify-content: center;
+	gap: 1.4vw;
+	background: white;
+	padding: 1vw;
+	
+	
+}
+.iconos img{
+	width: 4vw;
+	transition: 200ms ease-in-out;
+}
+.iconos img:hover{
+	transform: scale(1.2);
+
+}
+
+      /* Estilos CSS para el contenedor */
+      #mensaje-inicio-sesion {
+            
+            background-color: #ffffff;
+            padding: 150px;
+			border: 0.2vw solid 0.2vw solid rgb(0, 0, 0);
+            text-align: center;
+        }
+		footer{
+			background: white;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			position: relative;
+			padding-bottom: 2vw;
+			margin-top: 2vw;
+		}
+		footer h3{
+			margin: 1vw 0;
+		}
+		footer h3 i{
+			font-size: 2.4vw;
+		}
+		.iconos{
+			display: flex;
+			justify-content: center;
+			gap: 1.4vw;
+			background: white;
+			padding: 1vw;
+			transform: translateY(3vw);
+			width: 6vw;
+			height: 6vw;
+		}
+		.iconos img{
+			width: 4vw;
+			transition: 200ms ease-in-out;
+		}
+		.iconos img:hover{
+			transform: scale(1.2);
+		}
+		.raya{
+			width: 90vw;
+			background: black;
+			height: 0.3vw;
+			margin-bottom: 6vw;
+		}
+		footer p{
+			text-align: center;
+			font-weight: bold;
+		}
+		.girardot{
+			width: 8vw;
+			position: absolute;
+			bottom: 1vw;
+			right: 1vw;
+		}
+		.espacio_blanco{
+			height: 20vw;
+		}
+	

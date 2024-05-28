@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/login.css">
     <title>Login | nectar</title>
+    <script src="script.js"></script>
 </head>
 <body>
     <form action="logeo.php" method="post">
         <h2>INICIAR SESIÓN</h2>
-        <input class="texto" type="text" name="usuario" placeholder="Ingrese su usuario">
-        <input class="texto" type="password" name="contrasena" placeholder="Ingrese su contraseña">
+        <input class="texto" type="text" name="usuario" placeholder="Ingrese su usuario" required> 
+        <input class="texto" type="password" name="contrasena" placeholder="Ingrese su contraseña" required>
         <input class="enviar" type="submit" name="enviar" value="INGRESAR" id="boton">
         <a href="register.html">REGISTRARSE</a>
     </form>

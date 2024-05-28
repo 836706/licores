@@ -2,7 +2,6 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<link href='css/calendar.css' rel='stylesheet'/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script type="text/javascript" src="js/calendar.js"></script>
 	<script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js'></script>
@@ -20,16 +19,17 @@
 		</div>
 		<div class="navegacion">
 			<div class="botones">
-			<a href="login.html"><button class="blanco">Iniciar Sesión</button></a>
+			<a href="login.html"><button class="verde">Iniciar Sesión</button></a>
 			<a href="register.html"><button class="verde">Registrate</button></a>	
 			</div>
+			
 			<nav>
 				<ul>
 					<li><a href="">HOME</a></li>
 					<li><a href="#carrusel">LO NUEVO</a></li>
 					<li><a href="#productos">PRODUCTOS</a></li>
 					<li><a href="website/catalogo.html">CATÁLOGO</a></li>
-					<li><a href="#calendario">PROGRAMATE</a></li>
+					<li><a href="#calendar">PROGRAMATE</a></li>
 					<li><a href="website/contacto.html">CONTACTANOS</a></li>
 				</ul>
 			</nav>
@@ -73,37 +73,104 @@
 			</div>
 			<a href="website/catalogo.html"><button class="fucsia">Compra Aquí</button></a>
 		</section>
-		<section id="calendario" class="calendario">
-			<h2>PROGRAMATE CON NECTAR</h2>
-			<div class="calendar">
-				<div id='calendar'></div>
-				<div id="customPrompt" class="modal">
-					<div class="modal-content">
-						<span class="close">&times;</span>
-						<p>Ingrese el nombre del evento:</p>
-						<input type="text" id="eventInput">
-						<button id="submitButton">Aceptar</button>
-					</div>
-				</div>
-			</div>
-		</section>
+		<!DOCTYPE html>
+		<html lang='es'>
+		<head>
+		  <meta charset='utf-8' />
+		  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js'></script>
+		  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/main.es.js'></script>
+		  <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js'></script>
+		  <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.1/main.min.js'></script>
+		  <link href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.1/main.min.css' rel='stylesheet'/>
+		  <link rel="stylesheet" type="text/css" href="css/calendar.css">
+		  <script>
+			document.addEventListener('DOMContentLoaded', function() {
+			  var calendarEl = document.getElementById('calendar');
+			  var calendar = new FullCalendar.Calendar(calendarEl, {
+				initialView: 'listWeek',
+				locale: 'es',
+				headerToolbar: {
+				  left: 'list, prev,today,next',
+				  center: 'title',
+				  right: 'dayGridMonth,timeGridWeek,timeGridDay',
+				},
+				events: [
+				  {
+					title: 'Evento 1',
+					start: '2024-05-15T10:00:00'
+				  },
+				  {
+					title: 'Evento 2',
+					start: '2024-05-12T15:00:00'
+				  }
+				],
+				buttonText: {
+				  today: 'Hoy',
+				  month: 'Mes',
+				  week: 'Semana',
+				  day: 'Día',
+				  list: 'Lista'
+				},
+				customButtons: {
+				  addEventButton: {
+					text: 'Evento',
+					click: function() {
+					  var eventName = prompt('Ingrese el nombre del evento:');
+					  if (eventName) {
+						var dateStr = prompt('Ingrese la fecha del evento (AAAA-MM-DD):');
+						if (dateStr) {
+						  var date = new Date(dateStr + 'T00:00:00');
+						  if (!isNaN(date.getTime())) {
+							calendar.addEvent({
+							  title: eventName,
+							  start: date,
+							  allDay: true
+							});
+							alert('¡DISFRUTA UN GUARO!');
+						  } else {
+							alert('Fecha inválida.');
+						  }
+						} else {
+						  alert('No se ingresó una fecha.');
+						}
+					  } else {
+						alert('No se ingresó un nombre para el evento.');
+					  }
+					}
+				  }
+				},
+				headerToolbar: {
+				  left: 'prev,today,next',
+				  center: 'title',
+				  right: 'dayGridMonth,timeGridWeek,timeGridDay,list,addEventButton'
+				}
+			  });
+			  calendar.render();
+			});
+		  </script>
+		</head>
+		<body>
+		  <div id='calendar'></div>
+		</body>
+		</html>
 	</main>
 	<footer>
-		<h3><i>SIGUENOS</i></h3>
+		
 		<div class="iconos">
-			<img src="img/chat.png">
-			<img src="img/instagram.png">
-			<img src="img/whatsapp.png">
+			<img src="img/icono4.png" class="girardot">
+			<!-- Código de instalación Cliengo para mega82.abdalladina@gmail.com --> 
+<script type="text/javascript">(function () { var ldk = document.createElement('script'); ldk.type = 'text/javascript'; ldk.async = true; ldk.src = 'https://s.cliengo.com/weboptimizer/66452d291ed83a6a9f13b939/66452d2b1ed83a6a9f13b93d.js?platform=view_installation_code'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ldk, s); })();</script>
+
 		</div>
 		<div class="raya"></div>
 		<p>
 			<i>
-				El exceso de alcohol es perjudicial para la salud<br>
-				Prohíbese el expendio de bebidas embriagantes a menores de edad (Ley 30 de 19869)<br>
+				EL EXCESO DE ALCOHOL ES PERJUCIAL PARA LA SALUD <br>
+				PROHÍBESE EL EXPENDIO DE BEBIDAS EMBRIAGANTES A MENORES DE EDAD (LEY 30 DE 19869)<br>
 				2024 GIRLICORES. DESARROLLADOR<br>
 			</i>
 		</p>
-		<img src="img/icono4.png" class="girardot">
+	
 	</footer>
 	<script type="text/javascript">
 		jQuery(document).ready(function(){
